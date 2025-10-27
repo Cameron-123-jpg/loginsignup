@@ -16,3 +16,13 @@ Do **NOT** use this for real authentication. Passwords are stored in plaintext i
 Compile (replace `file.c` with your source file):
 ```bash
 gcc file.c -o loginapp
+./loginapp
+```
+
+This will create a login.txt file in the working directory which stores email and password pairs in the format:
+
+email@example.com,plaintextpassword
+
+## Security notes
+	•	For real apps, never store plaintext passwords. Use a password-hashing library (libsodium, bcrypt, Argon2) and verify with the library on login.
+	•	This program is for learning purposes only.
